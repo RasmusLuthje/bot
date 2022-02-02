@@ -2,40 +2,40 @@ radio.onReceivedString(function (receivedString) {
     if (receivedString == "FREM") {
         bitbot.goms(BBDirection.Forward, 100, 400)
         basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
+            . . # . .
+            . # # # .
+            # # # # #
+            . . # . .
+            . . # . .
             `)
     }
     if (receivedString == "TILBAGE") {
-        bitbot.goms(BBDirection.Forward, 100, 400)
+        bitbot.goms(BBDirection.Reverse, 100, 400)
         basic.showLeds(`
-            . . . # #
-            . . . . #
-            . . . # #
-            . # # . #
-            # . . . .
+            . . # . .
+            . . # . .
+            # # # # #
+            . # # # .
+            . . # . .
             `)
     }
     if (receivedString == "RIGHT") {
-        bitbot.rotatems(BBRobotDirection.Right, 60, 100)
+        bitbot.rotatems(BBRobotDirection.Right, 10, 100)
         basic.showLeds(`
-            . # # . .
             . . # . .
-            . . . . .
-            . . . . .
-            . . . . .
+            . . # # .
+            # # # # #
+            . . # # .
+            . . # . .
             `)
     }
     if (receivedString == "LEFT") {
-        bitbot.rotatems(BBRobotDirection.Left, 60, 100)
+        bitbot.rotatems(BBRobotDirection.Left, 10, 100)
         basic.showLeds(`
-            . . . . .
             . . # . .
-            . . . . .
-            . . # . .
+            . # # . .
+            # # # # #
+            . # # . .
             . . # . .
             `)
     }
