@@ -20,23 +20,23 @@ radio.onReceivedString(function (receivedString) {
             `)
     }
     if (receivedString == "RIGHT") {
-        bitbot.rotate(BBRobotDirection.Right, 10)
+        bitbot.rotatems(BBRobotDirection.Right, 60, 100)
         basic.showLeds(`
-            . . . . .
+            . # # . .
             . . # . .
             . . . . .
-            . . # . .
-            . . # . .
+            . . . . .
+            . . . . .
             `)
     }
     if (receivedString == "LEFT") {
-        bitbot.rotate(BBRobotDirection.Left, 10)
+        bitbot.rotatems(BBRobotDirection.Left, 60, 100)
         basic.showLeds(`
             . . . . .
             . . # . .
             . . . . .
-            . . . . .
-            . . . . .
+            . . # . .
+            . . # . .
             `)
     }
 })
