@@ -39,6 +39,22 @@ radio.onReceivedString(function (receivedString) {
             . . # . .
             `)
     }
+    if (receivedString == "DISCO") {
+        bitbot.ledRainbow()
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # . . . #
+            . # # # .
+            `)
+    }
+    if (receivedString == "LYS") {
+        bitbot.ledBrightness(255)
+    }
+    if (receivedString == "SLUK") {
+        bitbot.ledBrightness(40)
+    }
 })
 radio.setGroup(678)
 radio.setTransmitPower(7)
